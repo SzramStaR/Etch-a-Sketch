@@ -8,24 +8,21 @@
     <link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-    <script src="script.js"></script>
-    <h1>Pixel art creator!</h1>
-
-    <h2>Choose grid size</h2>
-
-    <form id="sizeSelector">
-        Grid height
-        <input id="inputHeight" type="number" min="1">
-        Grid width
-        <input id="inputWidth" type="number" min="1">
-        <input type="submit">
-    </form>
-    <H2>Pick a color</H2>
-    <input type="color" id="colorPicker"">
-    <h2>This is your masterpiece</h2>
-    <table id="pixelCanvas">
-
-    </table>
-
+    <div class="flexContainer">
+        <div class="title"><h1>Pixel art creator!</h1></div>
+        <div class="content">
+            <div class="board"></div>
+            <div class="buttons">
+                <input type="color" onchange="changeColor(this.value)">
+                <button onclick="changeColor('rainbow')">Rainbow</button>
+                <button onclick="changeColor('white')">Eraser</button>
+            </div>
+            <div>
+                <input type="text" placeholder="Size of grid" value="16" onchange="changeSize(this.value)" />
+                <button onclick="changeSize(document.querySelector('input').value)">Set size</button>
+            </div>
+        </div>
+    </div>
 </body>
+<script src="script.js"></script>
 </html>
