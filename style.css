@@ -4,3 +4,30 @@
     display: grid;
     border: 1px solid black;
 }
+.title{
+    display: flex;
+    justify-content: center;
+}
+.flexContainer{
+    height: 100vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.board:hover{
+    cursor: pointer;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 300px;
+    min-height: 300px;
+    width: 60vw;
+    height: 60vw;
+    max-width: 600px;
+    max-height: 600px;
+}
